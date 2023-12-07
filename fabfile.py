@@ -12,22 +12,18 @@ GUNICORN_SERVICE = "recommix"
 @task
 def deploy(ctx):
     # Connect to the server
-    with Connection("root@92fcd47de30b"):
-        # Navigate to the project directory
-        with ctx.cd(BASE_DIR):
-            # Update the codebase from the Git repository
-            ctx.run("git pull origin main")
+    with Connection("root@92fcd47de30b") as conn:
+        # Update the codebase from the Git repository
+        conn.run(f"cd {BASE_DIR} && git pull origin main")
 
-            # Install or update Python dependencies
-            ctx.run("pip install -r requirements.txt")
+        # Install or update Python dependencies
+        conn.run(f"cd {BASE_DIR} && pip install -r requirements.txt")
 
-            # Restart Gunicorn to apply changes
-            restart_gunicorn(ctx)
+        # Restart Gunicorn to apply changes
+        restart_gunicorn(conn)
 
 @task
-def restart_gunicorn(ctx):
-    # Connect to the server
-    with Connection("root@92fcd47de30b"):
-        # Restart Gunicorn service
-        ctx.sudo(f"systemctl restart {GUNICORN_SERVICE}")
+def restart_gunicorn(conn):
+    # Restart Gunicorn service
+    conn.sudo(f"systemctl restart {GUNICORN_SERVICE}")
 
