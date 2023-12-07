@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecomMix Recommendation System</title>
+  <!-- Include my CSS styles here -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+  <script defer>
+    // Highlight navigation for the 'about' page
+    window.addEventListener('load', () => {
+      highlightActiveLink();
+    });
+  </script>
+  
+<body>
+    <nav class= "header nav">
+        <ul>
+            <li><a href="{{ url_for('routes_bp.home') }}">Home</a></li>
+            <li><a href="{{ url_for('routes_bp.about') }}">About</a></li>
+            <!-- Add other navigation links as needed -->
+        </ul>
+    </nav>
+
+  <!-- Intro Section -->
+  <header class="header">
+   <!--  <img src="path/to/cover-image.jpg" alt="RecomMix Cover Image"> -->
+    <h1 class="header__title">RecomMix</h1>
+    <p>Discover Personalized Music Recommendations</p>
+    <a href="link-to-deployed-app" class="btn">Visit Project</a>
+  </header>
+  
+  <main class="main">
+  <!-- Feature Section -->
+  <section id="features">
+    <div class="feature">
+    <!--  <img src="path/to/feature1-image.jpg" alt="Feature 1 Image"> -->
+      <h2>Search Songs</h2>
+      <p>Find your favorite songs with our powerful search feature.</p>
+    </div>
+    <div class="feature">
+    <!--   <img src="path/to/feature2-image.jpg" alt="Feature 2 Image"> -->
+      <h2>Personalized Recommendations</h2>
+      <p>Get personalized music recommendations based on my preferences.</p>
+    </div>
+    <div class="feature">
+    <!--   <img src="path/to/feature3-image.jpg" alt="Feature 3 Image"> -->
+      <h2>Create Playlists</h2>
+      <p>Build and manage your own music playlists effortlessly.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About RecomMix</h2>
+    <p>RecomMix is a music recommendation system designed to provide you with a personalized music discovery experience. Our project was inspired by the love for music and the desire to create a seamless platform for finding and enjoying songs.</p>
+    </section>
+    <!-- Team Members -->
+    <footer>
+        <div class="team-member">
+            <h3>Aibueku Precious Okwuoma</h3>
+            <a href="https://www.linkedin.com/in/aibuekuoprecious/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/aibuekuoprecious" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/pre_shial" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+  <!-- Include my scripts here if needed -->
+
+</body>
+</html>

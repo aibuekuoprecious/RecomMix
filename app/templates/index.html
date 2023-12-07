@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecomMix Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <script defer>
+        // Highlight navigation for the 'about' page
+        window.addEventListener('load', () => {
+          highlightActiveLink();
+        });
+      </script>
+      
+</head>
+<body>
+    <nav class="header nav">
+        <ul>
+            <li><a href="{{ url_for('routes_bp.home') }}">Home</a></li>
+            <li><a href="{{ url_for('routes_bp.about') }}">About</a></li>
+            <!-- Add other navigation links as needed -->
+        </ul>
+    </nav>
+
+    <header class="header">
+        <!--  <img src="path/to/cover-image.jpg" alt="RecomMix Cover Image"> -->
+         <h1 class="header__title">RecomMix</h1>
+         <p>Discover Personalized Music Recommendations</p>
+    </header>
+       
+
+    <main class="main">
+        <div class="container">
+            <div class="search-container">
+                <label for="searchInput">Search for songs:</label>
+                <div class="search">
+                    <input type="text" id="searchInput" class="search__input" placeholder="Enter song name...">
+                    <button onclick="searchSongs()" class="search__button">Search</button>
+                </div>
+            </div>
+
+            <div class="user-input-container">
+                <label for="targetUser">Target User:</label>
+                <input type="text" id="targetUser" class="user-input" placeholder="Enter target user">
+
+                <label for="likedSongs">Liked Songs (comma-separated):</label>
+                <input type="text" id="likedSongs" class="user-input" placeholder="Enter liked songs">
+            </div>
+
+            <div class="control-buttons">
+                <button onclick="getRecommendations()" class="button button--primary">Get Recommendations</button>
+            </div>
+
+            <div id="songInfo" class="song-info-container"></div>
+
+            <div class="playback-container">
+                <audio controls id="audioPlayer" class="audio-player"></audio>
+            </div>
+
+            <div class="feedback-container">
+                <button onclick="collectUserFeedback('like')" class="feedback-button feedback-button--like">Like</button>
+                <button onclick="collectUserFeedback('dislike')" class="feedback-button feedback-button--dislike">Dislike</button>
+            </div>
+
+            <div class="playlist-container">
+                <label for="playlistName">Playlist Name:</label>
+                <input type="text" id="playlistName" class="user-input" placeholder="Enter playlist name...">
+
+                <div class="control-buttons">
+                    <button onclick="createPlaylist()" class="button button">Create Playlist</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="team-member">
+            <h3>Aibueku Precious Okwuoma</h3>
+            <a href="https://www.linkedin.com/in/aibuekuoprecious/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/aibuekuoprecious" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/pre_shial" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

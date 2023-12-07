@@ -1,0 +1,278 @@
+/* General styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+
+/* Add this style to highlight active navigation link */
+.nav a.active {
+  color: #0af866; /* Change to the desired highlight color */
+  font-weight: bold; /* Optionally, I can make the text bold or apply other styles */
+}
+
+  .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .btn{
+    color: #fff;
+  }
+
+  .btn:hover, .fab:hover{
+    color: #0af866; 
+  }
+
+  :root {
+    --background-color: #33552c;
+    --text-color: #fff;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1, h2, h3, p {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    opacity: 0.9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  /* Header */
+  
+  .header {
+    background-color: var(--background-color);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .header__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  /* Main */
+  
+  .main {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('https://picsum.photos/2000/1000?blur=2');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .main__heading {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  /* Search container */
+  
+  .search-container {
+    margin-bottom: 30px;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search__input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search__button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* User input container */
+  
+  .user-input-container {
+    margin-bottom: 30px;
+  }
+  
+  .user-input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 97%;
+    margin: 0 auto;
+  }
+  
+  /* Control buttons */
+  
+  .control-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    padding: 10px 15px;
+  }
+
+  /* Song info container */
+
+.song-info-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .song-info-container h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  /* Playback container */
+  
+  .playback-container {
+    margin-bottom: 30px;
+  }
+  
+  .audio-player {
+    width: 100%;
+  }
+  
+  /* Feedback container */
+  
+  .feedback-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .feedback-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback-button--like {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .feedback-button--dislike {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  /* Playlist container */
+  
+  .playlist-container {
+    margin-bottom: 30px;
+  }
+  
+  .playlist-management-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+  
+  /* Labels for search and user input containers */
+  
+  .search-container label,
+  .user-input-container label {
+    font-size: 14px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+  
+  /* Label for playlist name */
+  
+  .playlist-container label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+
+   /* Footer */
+ footer {
+  background-color: var(--background-color); /* Change background color as needed */
+  color: #fff; /* Change text color as needed */
+  padding: 5px 0;
+  text-align: center; /* Center the content */
+  width: 100%;
+}
+
+.team-member {
+  margin-bottom: 5px; /* Add spacing between team members */
+}
+
+.team-member h3 {
+  font-size: 18px; /* Adjust font size for team member names */
+  font-weight: 500; /* Adjust font weight for team member names */
+  margin-bottom: 5px; /* Add spacing after team member names */
+}
+
+footer .team-member i {
+  color: white;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  /* Adjust container width for smaller screens */
+  .container {
+    max-width: 600px;
+  }
+
+  /* Adapt search and user input container laIt */
+  .search-container,
+  .user-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Labels for search and user input containers */
+  .search-container label,
+  .user-input-container label {
+    margin-bottom: 10px;
+  }
+
+  .user-input {
+    width: 92.5%;
+  }
+}
